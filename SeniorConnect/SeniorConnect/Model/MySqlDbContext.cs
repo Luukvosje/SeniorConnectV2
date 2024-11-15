@@ -1,5 +1,4 @@
-﻿
-
+﻿using MySql.Data.MySqlClient;
 
 namespace Seniorconnect_Luuk_deVos.Model
 {

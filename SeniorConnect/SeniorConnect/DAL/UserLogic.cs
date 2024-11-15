@@ -16,7 +16,6 @@ namespace Seniorconnect_Luuk_deVos.DAL
             _passwordHasher = new PasswordHasher<string>();
         }
 
-
         public User AuthenticateUser(string email, string password)
         {
             User user = ValidateUser(email, password);
@@ -38,7 +37,7 @@ namespace Seniorconnect_Luuk_deVos.DAL
             using (var conn = _dbContext.GetConnection())
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand("SELECT * FROM users WHERE email = @email", conn);
+                MySqlCommand cmd = new MySqlCommand("SELECT * FROM users WHERE Email = @email", conn);
                 cmd.Parameters.AddWithValue("@email", email);
 
                 using (var reader = cmd.ExecuteReader())
@@ -51,7 +50,7 @@ namespace Seniorconnect_Luuk_deVos.DAL
 
                         if (result == PasswordVerificationResult.Success)
                         {
-                            return new User { userId = reader.GetInt32("user_id"), email = reader.GetString("email"), name = reader.GetString("name") };
+                            return new User { userId = reader.GetInt32("UserId"), email = reader.GetString("Email"), name = reader.GetString("Name") };
                         }
                     }
                 }
@@ -75,7 +74,7 @@ namespace Seniorconnect_Luuk_deVos.DAL
                     conn.Open();
 
                     // Check if email exists
-                    var checkEmailCmd = new MySqlCommand("SELECT COUNT(*) FROM users WHERE email = @Email", conn);
+                    var checkEmailCmd = new MySqlCommand("SELECT COUNT(*) FROM users WHERE Email = @Email", conn);
                     checkEmailCmd.Parameters.AddWithValue("@Email", email);
                     int emailExists = Convert.ToInt32(checkEmailCmd.ExecuteScalar());
 
@@ -83,7 +82,7 @@ namespace Seniorconnect_Luuk_deVos.DAL
                         return false;
 
                     // Insert new user
-                    var cmd = new MySqlCommand("INSERT INTO users (email, passwordhash, name) VALUES (@Email, @PasswordHash, @Name)", conn);
+                    var cmd = new MySqlCommand("INSERT INTO users (email, PasswordHash, Name) VALUES (@Email, @PasswordHash, @Name)", conn);
                     cmd.Parameters.AddWithValue("@Email", email);
                     cmd.Parameters.AddWithValue("@PasswordHash", hashedPassword);
                     cmd.Parameters.AddWithValue("@Name", userName);
