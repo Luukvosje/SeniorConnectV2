@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="DAL\BaseLogic.cs" />
+    <Content Include="DAL\UserLogic.cs" />
+    <Content Include="Model\MySqlDbContext.cs" />
+    <Content Include="Model\User.cs" />
+    <Content Include="Pages\Activity.cshtml.cs" />
+    <Content Include="Pages\Error.cshtml.cs" />
+    <Content Include="Pages\Index.cshtml.cs" />
+    <Content Include="Pages\Login.cshtml.cs" />
+    <Content Include="Pages\Register.cshtml.cs" />
+    <Content Include="Pages\Shared\_Layout.cshtml.css" />
+    <Content Include="Program.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.2.0" />
+    <PackageReference Include="MySql.Data" Version="9.1.0" />
+  </ItemGroup>
+
+</Project>
