@@ -5,6 +5,8 @@ VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeniorConnect", "SeniorConnect\SeniorConnect.csproj", "{30C0EB8B-E34E-4571-AA76-20CAC8CDD864}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DalLibrary", "DalLibrary\DalLibrary.csproj", "{28C2F1AD-703C-4D0C-9CAA-24AB1635308A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{30C0EB8B-E34E-4571-AA76-20CAC8CDD864}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30C0EB8B-E34E-4571-AA76-20CAC8CDD864}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30C0EB8B-E34E-4571-AA76-20CAC8CDD864}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28C2F1AD-703C-4D0C-9CAA-24AB1635308A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28C2F1AD-703C-4D0C-9CAA-24AB1635308A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28C2F1AD-703C-4D0C-9CAA-24AB1635308A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28C2F1AD-703C-4D0C-9CAA-24AB1635308A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
