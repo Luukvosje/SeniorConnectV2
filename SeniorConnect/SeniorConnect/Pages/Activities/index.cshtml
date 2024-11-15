@@ -41,7 +41,9 @@
                 {
                     var activity = Model.currentActivities[i];
                     <tr>
-                        <td>@(i + 1)</td>
+                        <td>
+                            <a class="nav-link text-dark btn btn-primary" asp-area="" asp-page="/Activities/activity" asp-route-activityId="@activity.ID">gebruikers bekijken</a>
+                        </td>
                         <td>@activity.ID</td>
                         <td>@activity.Title</td>
                         <td>@activity.Description</td>

@@ -11,7 +11,7 @@
     <Content Include="DAL\UserLogic.cs" />
     <Content Include="Model\MySqlDbContext.cs" />
     <Content Include="Model\User.cs" />
-    <Content Include="Pages\Activity\index.cshtml.cs" />
+    <Content Include="Pages\Activities\index.cshtml.cs" />
     <Content Include="Pages\Error.cshtml.cs" />
     <Content Include="Pages\Index.cshtml.cs" />
     <Content Include="Pages\Login.cshtml.cs" />

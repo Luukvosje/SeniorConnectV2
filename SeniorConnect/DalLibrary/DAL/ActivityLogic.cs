@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Microsoft.Extensions.Configuration;
+using MySql.Data.MySqlClient;
 using SeniorConnect.Model;
 using Seniorconnect_Luuk_deVos.DAL;
 using Seniorconnect_Luuk_deVos.Model;
